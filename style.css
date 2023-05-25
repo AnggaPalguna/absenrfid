@@ -1,0 +1,101 @@
+.child1 {
+  font-size: 30px;
+  font-family: monospace;
+  padding-top: 10px;
+  text-align: center;
+  float: left;
+  width: 50%;
+  color: green;
+  position: absolute;
+  width: 340px;
+  height: 641px;
+  left: 747px;
+  top: 150px;
+  overflow: scroll;
+
+  background: #d9d9d9;
+  border-radius: 10px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.child2 {
+  font-family: monospace;
+  font-size: 30px;
+  padding-top: 10px;
+  text-align: center;
+  float: right;
+  width: 50%;
+  color: green;
+  position: absolute;
+  width: 340px;
+  height: 641px;
+  left: 353px;
+  top: 150px;
+  overflow: scroll;
+
+  background: #d9d9d9;
+  border-radius: 10px;
+
+  background: #d9d9d9;
+  border-radius: 10px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.container {
+  display: grid;
+  place-items: center; /* Mengatur kotak di tengah secara horizontal dan vertical */
+}
+.box {
+  width: 901px;
+  height: 901px;
+
+  padding: 100px;
+  background: rgba(83, 159, 250, 0.53);
+  border-radius: 20px;
+}
+.child {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  padding-top: 20px;
+  padding-bottom: 10px;
+  text-align: center;
+  margin-left: 10px;
+  color: black;
+  font-size: medium;
+}
+
+.data {
+  margin-left: -10px;
+  text-align: center;
+  padding-top: 10px;
+}
+.none1 {
+  position: absolute;
+  width: 169px;
+  height: 44px;
+  left: 439px;
+  top: 50px;
+
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 44px;
+}
+.none2 {
+  position: absolute;
+  width: 169px;
+  height: 44px;
+  left: 832px;
+  top: 50px;
+
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 44px;
+}
+h1 {
+  text-align: center;
+  background: #d9d9d9;
+}
