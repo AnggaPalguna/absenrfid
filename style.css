@@ -1,58 +1,83 @@
-.child1 {
-  font-size: 30px;
-  font-family: monospace;
-  padding-top: 10px;
-  text-align: center;
-  float: left;
-  width: 50%;
-  color: green;
-  position: absolute;
-  width: 340px;
-  height: 641px;
-  left: 747px;
-  top: 150px;
-  overflow: scroll;
-
-  background: #d9d9d9;
-  border-radius: 10px;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Prompt:wght@200&display=swap");
+/* Global styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #262525;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
 }
 
+/* Header styles */
+.header {
+  background-color: #a0adbe87;
+  padding: 20px;
+  color: #262525;
+  text-align: center;
+  border-radius: 20px;
+  width: 96vw;
+}
+
+.header h1 {
+  margin: 0;
+}
+
+.child1,
 .child2 {
+  font-size: 30px;
+  font-family: monospace;
+  padding-top: 10px;
+  text-align: center;
+  color: #262525;
+  width: 340px;
+  height: 525px;
+  background: #ffffff;
+  border-radius: 5px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.child1 > div,
+.child2 > div {
+  margin-top: 20px;
+  height: 80%;
+  overflow: auto;
+}
+
+/* .child2 {
   font-family: monospace;
   font-size: 30px;
   padding-top: 10px;
   text-align: center;
-  float: right;
-  width: 50%;
-  color: green;
-  position: absolute;
+  position: sticky;
+  color: #262525;
+  position: fixed;
   width: 340px;
-  height: 641px;
-  left: 353px;
-  top: 150px;
-  overflow: scroll;
-
-  background: #d9d9d9;
-  border-radius: 10px;
-
-  background: #d9d9d9;
-  border-radius: 10px;
+  height: 525px;
+  overflow: auto;
+  background: #ffffff;
+  border-radius: 5px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
+} */
 
 .container {
   display: grid;
-  place-items: center; /* Mengatur kotak di tengah secara horizontal dan vertical */
-}
-.box {
-  width: 901px;
-  height: 901px;
-
-  padding: 100px;
-  background: rgba(83, 159, 250, 0.53);
+  place-items: center;
+  /* position: fixed; */
+  /* z-index: -1; */
+  /* width: 901px; */
+  /* height: fit-content; */
+  /* top: 12%;
+  left: 20%; */
+  width: 800px;
+  padding: 20px 20px 20px 20px;
+  background: #a0adbe87;
   border-radius: 20px;
+  padding-bottom: 50px;
 }
+
 .child {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
@@ -69,33 +94,93 @@
   text-align: center;
   padding-top: 10px;
 }
+
 .none1 {
-  position: absolute;
-  width: 169px;
-  height: 44px;
-  left: 439px;
-  top: 50px;
-
-  font-family: "Inter";
+  color: #262525;
+  font-family: "Prompt", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 36px;
   line-height: 44px;
 }
-.none2 {
-  position: absolute;
-  width: 169px;
-  height: 44px;
-  left: 832px;
-  top: 50px;
 
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 36px;
-  line-height: 44px;
+.container-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: right;
 }
-h1 {
-  text-align: center;
-  background: #d9d9d9;
+
+.date-time {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  /* width: 340px;
+  height: 525px; */
+  /* top: 17%; */
+  /* left: 65%; */
+  font-size: 14px;
+  font-weight: bold;
+  color: #333;
+  /* position: absolute; */
+}
+
+.child1 > div::-webkit-scrollbar {
+  width: 10px;
+}
+
+.child1 > div::-webkit-scrollbar-track {
+  background-color: #ffffff;
+  border-radius: 10px;
+}
+
+.child1 > div::-webkit-scrollbar-thumb {
+  background-color: #ffffff;
+  border-radius: 10px;
+}
+
+.child1 > div::-webkit-scrollbar-thumb:hover {
+  background-color: #e3e2e2;
+}
+
+.child2 > div::-webkit-scrollbar {
+  width: 10px;
+}
+
+.child2 > div::-webkit-scrollbar-track {
+  background-color: #ffffff;
+  border-radius: 10px;
+}
+
+.child2 > div::-webkit-scrollbar-thumb {
+  background-color: #ffffff;
+  border-radius: 10px;
+}
+
+.child2 > div::-webkit-scrollbar-thumb:hover {
+  background-color: #e3e2e2;
+}
+#result {
+  display: flex;
+  gap: 20px;
+}
+
+/* #result {
+  display: flex;
+  flex-direction: column;
+  background-color: red;
+  width: 1000px;
+  height: 1000px;
+} */
+
+.children {
+}
+
+@media only screen and (max-width: 600px) {
+  .header {
+    font-size: 12px;
+  }
+
+  #result {
+    flex-direction: column;
+  }
 }
