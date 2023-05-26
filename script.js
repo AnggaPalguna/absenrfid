@@ -20,7 +20,7 @@ function getData() {
     var result = document.getElementById("result");
 
     // Menghapus konten sebelumnya
-    result.innerHTML = "";
+    // result.innerHTML = "";
 
     // Mengambil array dari setiap child
     var children = Object.keys(data);
@@ -55,10 +55,10 @@ function displayChildData(data, parentElement) {
 
       if (typeof childData === "object") {
         // Jika child memiliki child lain, lanjutkan rekursi
-        var listItem = document.createElement("div");
+        var listItem = document.createElement("fix");
         listItem.textContent = key;
         listItem.classList.add("child");
-        var childList = document.createElement("div");
+        var childList = document.createElement("fix");
         listItem.appendChild(childList);
         parentElement.appendChild(listItem);
         displayChildData(childData, childList);
@@ -77,3 +77,28 @@ function displayChildData(data, parentElement) {
 document.addEventListener("DOMContentLoaded", function (event) {
   getData();
 });
+function updateDateTime() {
+  var dateElement = document.getElementById("date");
+  var timeElement = document.getElementById("time");
+
+  var currentDate = new Date();
+  var utcOffset = 8;
+  var utcTime = currentDate.getTime() + currentDate.getTimezoneOffset() * 60000;
+  var localTime = utcTime + 3600000 * utcOffset;
+  currentDate.setTime(localTime);
+
+  var options = {
+    weekday: "long",
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+  };
+  var dateString = currentDate.toLocaleDateString("id-ID", options);
+  var timeString = currentDate.toLocaleTimeString("en-US", { hour12: false });
+
+  dateElement.textContent = dateString;
+  timeElement.textContent = timeString;
+}
+
+// Memperbarui tanggal dan waktu setiap detik
+setInterval(updateDateTime, 1000);
